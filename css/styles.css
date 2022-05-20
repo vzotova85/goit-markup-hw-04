@@ -15,6 +15,7 @@
     --primary-bc-color: #E5E5E5;
     --footer-bc-color: #2F303A;
     --border-color: #ECECEC;
+    --icon-color: #AFB1B8;
 }
 
 /* *,
@@ -38,15 +39,16 @@ img {
     display: block;
 }
 
-/* Header */
-
 /* background colors */
 .header,
 .specifics,
 .work,
-.portfolio {
+.portfolio,
+.clients {
     background-color: var(--white-text-color);
 }
+
+/* Header */
 
 .container {
     margin-left: auto;
@@ -160,6 +162,16 @@ img {
     color: var(--accent-color);
 }
 
+.contacts .icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.contacts .icon:hover {
+    fill: var(--accent-color)
+}
+
 /* Section */
 h1,
 h2,
@@ -187,8 +199,20 @@ h6 {
     margin-bottom: 0;
     text-align: center;
     background-color: var(--footer-bc-color);
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+        url(../images/imghero.jpg);
     padding-top: 200px;
-    padding-bottom: 200px
+    padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
 }
 .hero-title {
@@ -230,6 +254,7 @@ h6 {
     margin-bottom: 50px;
 }
 
+
 .specifics p,
 .work p,
 .team p {
@@ -246,6 +271,20 @@ h6 {
 
 .specifics .item {
     margin-right: 30px;
+
+}
+
+.box-icon {
+    display: flex;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background-color: var(--secondary-bc-color);
+}
+
+.specifics .icon {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .specifics .item:last-child {
@@ -256,6 +295,7 @@ h6 {
     text-transform: uppercase;
     font-size: 14px;
     line-height: 1.17;
+    margin-top: 30px;
 }
 
 .specifics h3,
@@ -310,12 +350,76 @@ h6 {
 }
 
 .team p {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
 }
 
-/* .team .text {
-    border: 1px solid var(--border-color);
-} */
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.socialmedia .item-sm:not(:last-child) {
+    margin-right: 10px;
+}
+
+.item-sm {
+    width: 44px;
+    height: 44px;
+}
+
+.link-sm {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--icon-color);
+}
+
+.link-sm:hover {
+    background-color: var(--accent-color);
+    color: var(--white-text-color);
+}
+
+.socialmedia .icon {
+    fill: currentColor;
+}
+
+/* Clients */
+.clients .list {
+    display: flex;
+    justify-content: center;
+}
+
+.clients .link {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 1px solid var(--icon-color);
+    border-radius: 4px;
+    color: var(--icon-color);
+}
+
+.clients .item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients .link:hover {
+    color: var(--accent-color);
+    outline-color: var(--accent-color);
+}
+
+.icon-cl {
+    margin: 16px 32px;
+    fill: currentColor
+}
 
 /*Footer*/
 .footer {
@@ -323,6 +427,7 @@ h6 {
 }
 
 .footer .container {
+    display: flex;
     padding-top: 60px; 
     padding-bottom: 60px;
 }
@@ -352,6 +457,32 @@ h6 {
 .footer .logo {
     margin-bottom: 20px;
 }
+
+.footer h3 {
+    color: var(--white-text-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    margin-bottom: 20px;
+}
+
+.sm-ft {
+    margin-left: 70px;
+    padding-top: 12px;
+}
+
+ .footer .link-sm {
+    background: rgba(255, 255, 255, 0.1);
+ }
+
+ .footer .link-sm:hover {
+     background-color: var(--accent-color);
+ }
+
+ .footer .icon {
+     fill: var(--white-text-color);
+ }
 
 /*Portfolio*/
 /*фильтр*/
